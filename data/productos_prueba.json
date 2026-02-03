@@ -1,0 +1,351 @@
+[
+  {
+    "id": "caballero-158-20-0282",
+    "nombre": "Zapato Caballero 158-20",
+    "categoria": "Caballero",
+    "referencia": "158-20",
+    "codigo": "0282",
+    "tallas": [
+      "40",
+      "41"
+    ],
+    "precio": 190000,
+    "imagen": "caballero/158-20_0282.jpg"
+  },
+  {
+    "id": "caballero-412-0382",
+    "nombre": "Zapato Caballero 412",
+    "categoria": "Caballero",
+    "referencia": "412",
+    "codigo": "0382",
+    "tallas": [
+      "39",
+      "40"
+    ],
+    "precio": 240000,
+    "imagen": "caballero/412_0382.jpg"
+  },
+  {
+    "id": "caballero-9021-0383",
+    "nombre": "Zapato Caballero 9021",
+    "categoria": "Caballero",
+    "referencia": "9021",
+    "codigo": "0383",
+    "tallas": [
+      "40"
+    ],
+    "precio": 240000,
+    "imagen": "caballero/9021_0383.jpg"
+  },
+  {
+    "id": "caballero-9043-038",
+    "nombre": "Zapato Caballero 9043",
+    "categoria": "Caballero",
+    "referencia": "9043",
+    "codigo": "038",
+    "tallas": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "precio": 240000,
+    "imagen": "caballero/9043_0038.jpg"
+  },
+  {
+    "id": "caballero-917-0321",
+    "nombre": "Zapato Caballero 917",
+    "categoria": "Caballero",
+    "referencia": "917",
+    "codigo": "0321",
+    "tallas": [
+      "38"
+    ],
+    "precio": 210000,
+    "imagen": "caballero/917_0321.jpg"
+  },
+  {
+    "id": "caballero-adrian-0350",
+    "nombre": "Zapato Caballero ADRIAN",
+    "categoria": "Caballero",
+    "referencia": "ADRIAN",
+    "codigo": "0350",
+    "tallas": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "precio": 220000,
+    "imagen": "caballero/ADRIAN_0350.jpg"
+  },
+  {
+    "id": "caballero-alberto-0232",
+    "nombre": "Zapato Caballero ALBERTO",
+    "categoria": "Caballero",
+    "referencia": "ALBERTO",
+    "codigo": "0232",
+    "tallas": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "precio": 260000,
+    "imagen": "caballero/ALBERTO_0232.jpg"
+  },
+  {
+    "id": "caballero-boris-0292",
+    "nombre": "Zapato Caballero BORIS",
+    "categoria": "Caballero",
+    "referencia": "BORIS",
+    "codigo": "0292",
+    "tallas": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "precio": 260000,
+    "imagen": "caballero/BORIS_0292.jpg"
+  },
+  {
+    "id": "caballero-julio-0231",
+    "nombre": "Zapato Caballero JULIO",
+    "categoria": "Caballero",
+    "referencia": "JULIO",
+    "codigo": "0231",
+    "tallas": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "precio": 260000,
+    "imagen": "caballero/JULIO_0231.jpg"
+  },
+  {
+    "id": "caballero-sergio-0414",
+    "nombre": "Zapato Caballero SERGIO",
+    "categoria": "Caballero",
+    "referencia": "SERGIO",
+    "codigo": "0414",
+    "tallas": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "precio": 260000,
+    "imagen": "caballero/SERGIO_0414.jpg"
+  },
+  {
+    "id": "caballero-tiago-0342",
+    "nombre": "Zapato Caballero TIAGO",
+    "categoria": "Caballero",
+    "referencia": "TIAGO",
+    "codigo": "0342",
+    "tallas": [
+      "39",
+      "40",
+      "41"
+    ],
+    "precio": 20000,
+    "imagen": "caballero/TIAGO_0342.jpg"
+  },
+  {
+    "id": "dama-1018-0407",
+    "nombre": "Zapato Dama 1018",
+    "categoria": "Dama",
+    "referencia": "1018",
+    "codigo": "0407",
+    "tallas": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38"
+    ],
+    "precio": 275000,
+    "imagen": "dama/1018_0407.jpg"
+  },
+  {
+    "id": "dama-1101-0081",
+    "nombre": "Zapato Dama 1101",
+    "categoria": "Dama",
+    "referencia": "1101",
+    "codigo": "0081",
+    "tallas": [
+      "34",
+      "35",
+      "36",
+      "37"
+    ],
+    "precio": 290000,
+    "imagen": "dama/1101_0081.jpg"
+  },
+  {
+    "id": "dama-1101-0154",
+    "nombre": "Zapato Dama 1101",
+    "categoria": "Dama",
+    "referencia": "1101",
+    "codigo": "0154",
+    "tallas": [
+      "36"
+    ],
+    "precio": 290000,
+    "imagen": "dama/1101_0154.jpg"
+  },
+  {
+    "id": "dama-1500-0297",
+    "nombre": "Zapato Dama 1500",
+    "categoria": "Dama",
+    "referencia": "1500",
+    "codigo": "0297",
+    "tallas": [
+      "34",
+      "35",
+      "36",
+      "38"
+    ],
+    "precio": 230000,
+    "imagen": "dama/1500_0297.jpg"
+  },
+  {
+    "id": "dama-2813-0394",
+    "nombre": "Zapato Dama 2813",
+    "categoria": "Dama",
+    "referencia": "2813",
+    "codigo": "0394",
+    "tallas": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "precio": 260000,
+    "imagen": "dama/2813_0394.jpg"
+  },
+  {
+    "id": "dama-3000-0395",
+    "nombre": "Zapato Dama 3000",
+    "categoria": "Dama",
+    "referencia": "3000",
+    "codigo": "0395",
+    "tallas": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38"
+    ],
+    "precio": 260000,
+    "imagen": "dama/3000_0395.jpg"
+  },
+  {
+    "id": "dama-832-298",
+    "nombre": "Zapato Dama 832",
+    "categoria": "Dama",
+    "referencia": "832",
+    "codigo": "298",
+    "tallas": [
+      "37",
+      "38"
+    ],
+    "precio": 220000,
+    "imagen": "dama/832_0298.jpg"
+  },
+  {
+    "id": "dama-915-0075",
+    "nombre": "Zapato Dama 915",
+    "categoria": "Dama",
+    "referencia": "915",
+    "codigo": "0075",
+    "tallas": [
+      "34",
+      "36",
+      "38",
+      "39"
+    ],
+    "precio": 260000,
+    "imagen": "dama/915_0075.jpg"
+  },
+  {
+    "id": "deportivo-064-064",
+    "nombre": "Zapato Deportivo 064",
+    "categoria": "Deportivo",
+    "referencia": "064",
+    "codigo": "064",
+    "tallas": [
+      "38",
+      "39"
+    ],
+    "precio": 65000,
+    "imagen": "deportivo/064_0064.jpg"
+  },
+  {
+    "id": "deportivo-201-201",
+    "nombre": "Zapato Deportivo 201",
+    "categoria": "Deportivo",
+    "referencia": "201",
+    "codigo": "201",
+    "tallas": [
+      "39",
+      "40"
+    ],
+    "precio": 175000,
+    "imagen": "deportivo/201_0201.jpg"
+  },
+  {
+    "id": "deportivo-263-0263",
+    "nombre": "Zapato Deportivo 263",
+    "categoria": "Deportivo",
+    "referencia": "263",
+    "codigo": "0263",
+    "tallas": [
+      "36",
+      "37",
+      "38",
+      "40"
+    ],
+    "precio": 185000,
+    "imagen": "deportivo/263_0263.jpg"
+  },
+  {
+    "id": "deportivo-aaa-201",
+    "nombre": "Zapato Deportivo AAA",
+    "categoria": "Deportivo",
+    "referencia": "AAA",
+    "codigo": "201",
+    "tallas": [
+      "37",
+      "40",
+      "41"
+    ],
+    "precio": 150000,
+    "imagen": "deportivo/AAA_0201.jpg"
+  },
+  {
+    "id": "deportivo-converse-27",
+    "nombre": "Zapato Deportivo CONVERSE",
+    "categoria": "Deportivo",
+    "referencia": "CONVERSE",
+    "codigo": "27",
+    "tallas": [
+      "38",
+      "39",
+      "40",
+      "42"
+    ],
+    "precio": 100000,
+    "imagen": "deportivo/CONVERSE_0027.jpg"
+  }
+]
