@@ -1,137 +1,373 @@
 <!DOCTYPE html>
 <html lang="es">
-<style>
-:root{
-  --rojo:#E30613;
-  --negro:#000000;
-  --blanco:#ffffff;
-  --gris:#f4f4f4;
-}
-
-body{
-  margin:0;
-  font-family: system-ui, Arial;
-  background: var(--gris);
-  color: var(--negro);
-}
-
-.header{
-  background: var(--negro);
-  padding:14px 20px;
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
-.header img{
-  height:40px;
-}
-
-.header h1{
-  color:var(--blanco);
-  font-size:20px;
-  margin:0;
-  font-weight:800;
-}
-
-.container{
-  padding:20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-  gap:18px;
-}
-
-.card{
-  background:var(--blanco);
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 6px 16px rgba(0,0,0,.08);
-}
-
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.card .p{
-  padding:14px;
-}
-
-.card h3{
-  margin:0 0 6px 0;
-  font-size:16px;
-}
-
-.price{
-  color:var(--rojo);
-  font-weight:900;
-  font-size:18px;
-}
-
-.meta{
-  font-size:14px;
-  color:#555;
-  margin-top:4px;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  background:var(--rojo);
-  color:white;
-  padding:10px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
-</style>
-
-  
 <head>
-  <meta charset="UTF-8">
-  <title>Catálogo de Zapatos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Catálogo SAVI</title>
+
   <style>
-    body { font-family: Arial; background:#f5f5f5; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:20px; }
-    .card { background:white; padding:10px; border-radius:8px; }
-    img { width:100%; height:200px; object-fit:cover; }
+    :root{
+      --rojo:#E30613;
+      --negro:#000000;
+      --blanco:#FFFFFF;
+      --gris:#F4F4F4;
+      --borde:#E5E7EB;
+      --texto:#111827;
+      --muted:#6B7280;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      background: var(--gris);
+      color: var(--texto);
+    }
+
+    /* Header */
+    .header{
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      position: sticky;
+      top:0;
+      z-index:10;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    }
+    .header img{
+      height: 38px;
+      width: auto;
+      display:block;
+    }
+    .header .title{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .header .title b{
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    .header .title span{
+      font-size: 13px;
+      color: rgba(255,255,255,.75);
+    }
+
+    /* Layout */
+    .container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    /* Toolbar */
+    .toolbar{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-bottom: 14px;
+    }
+
+    .search{
+      flex: 1 1 280px;
+      display:flex;
+      align-items:center;
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: 10px 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+    }
+    .search input{
+      width:100%;
+      border:none;
+      outline:none;
+      font-size: 14px;
+      background: transparent;
+      color: var(--texto);
+    }
+    .search small{
+      color: var(--muted);
+      margin-right: 10px;
+      font-weight: 700;
+    }
+
+    .cats{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .cat-btn{
+      border: 1px solid var(--borde);
+      background: var(--blanco);
+      color: var(--texto);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor:pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+      transition: transform .05s ease;
+    }
+    .cat-btn:active{ transform: scale(.98); }
+    .cat-btn.active{
+      background: var(--rojo);
+      border-color: var(--rojo);
+      color: var(--blanco);
+    }
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card{
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      overflow:hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    }
+    .card img{
+      width:100%;
+      height: 220px;
+      object-fit: cover;
+      display:block;
+      background: #fff;
+    }
+    .card .p{
+      padding: 12px 12px 14px;
+    }
+    .card h3{
+      margin: 0 0 6px 0;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .1px;
+    }
+    .price{
+      color: var(--rojo);
+      font-weight: 950;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .meta{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top: 10px;
+      background: var(--rojo);
+      color: var(--blanco);
+      padding: 10px 12px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .empty{
+      grid-column: 1/-1;
+      padding: 14px;
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    .footer{
+      text-align:center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 22px 10px 30px;
+    }
   </style>
 </head>
+
 <body>
-<div class="header">
-  <img src="assets/brand/logo-savi.png" alt="SAVI">
-  <h1>Catálogo de Zapatos</h1>
-</div>
+  <!-- HEADER -->
+  <div class="header">
+    <img src="assets/brand/logo-savi.png" alt="SAVI" onerror="this.style.display='none'">
+    <div class="title">
+      <b>Catálogo SAVI</b>
+      <span>Zapatos • Dama • Caballero • Deportivos</span>
+    </div>
+  </div>
 
-<div class="container">
-  <div class="grid" id="catalogo"></div>
-</div>
+  <div class="container">
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <div class="search">
+        <small>🔎</small>
+        <input id="search" type="text" placeholder="Buscar por nombre, referencia o código..." />
+      </div>
 
-<h1>Catálogo de Zapatos</h1>
-<div class="grid" id="catalogo"></div>
+      <div class="cats">
+        <button class="cat-btn active" data-cat="Todos">Todos</button>
+        <button class="cat-btn" data-cat="Caballero">Caballero</button>
+        <button class="cat-btn" data-cat="Dama">Dama</button>
+        <button class="cat-btn" data-cat="Deportivo">Deportivo</button>
+      </div>
+    </div>
 
-<script>
-fetch("data/productos.json")
-  .then(res => res.json())
-  .then(productos => {
-    const cont = document.getElementById("catalogo");
-    productos.forEach(p => {
-      cont.innerHTML += `
-        <div class="card">
-          <img src="assets/img/${p.imagen}">
-          <h3>${p.nombre}</h3>
-          <p><b>$${p.precio.toLocaleString()}</b></p>
-          <p>Tallas: ${p.tallas.join(", ")}</p>
-        </div>
-      `;
+    <!-- GRID -->
+    <div class="grid" id="catalogo"></div>
+
+    <div class="footer">
+      © SAVI — Catálogo web (GitHub Pages)
+    </div>
+  </div>
+
+  <script>
+    // ✅ Cambia este número por tu WhatsApp (sin +, sin espacios)
+    const WHATSAPP_NUMBER = "573163119312";
+
+    // ✅ Ruta del JSON
+    const DATA_URL = "data/productos.json";
+
+    const grid = document.getElementById("catalogo");
+    const searchInput = document.getElementById("search");
+    const categoryButtons = document.querySelectorAll("[data-cat]");
+
+    let productos = [];
+    let categoriaActiva = "Todos";
+    let textoBusqueda = "";
+
+    function formatCOP(value){
+      try{
+        return new Intl.NumberFormat("es-CO", {
+          style:"currency",
+          currency:"COP",
+          maximumFractionDigits:0
+        }).format(value);
+      }catch(e){
+        return "$" + Number(value).toLocaleString("es-CO");
+      }
+    }
+
+    function safeText(v){
+      return (v ?? "").toString().trim();
+    }
+    function normalize(str){
+      return safeText(str).toLowerCase();
+    }
+
+    function buildWhatsAppLink(p){
+      const nombre = safeText(p.nombre);
+      const ref = safeText(p.referencia);
+      const cod = safeText(p.codigo);
+      const tallas = Array.isArray(p.tallas) ? p.tallas.join(", ") : safeText(p.tallas);
+
+      const msg =
+        `Hola, me interesa este producto SAVI:%0A` +
+        `• ${encodeURIComponent(nombre)}%0A` +
+        (ref ? `• Ref: ${encodeURIComponent(ref)}%0A` : "") +
+        (cod ? `• Código: ${encodeURIComponent(cod)}%0A` : "") +
+        (tallas ? `• Tallas: ${encodeURIComponent(tallas)}%0A` : "") +
+        `¿Está disponible?`;
+
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    }
+
+    function matchesCategoria(p){
+      if(categoriaActiva === "Todos") return true;
+      return normalize(p.categoria) === normalize(categoriaActiva);
+    }
+
+    function matchesBusqueda(p){
+      if(!textoBusqueda) return true;
+      const q = normalize(textoBusqueda);
+
+      const campos = [
+        p.nombre, p.categoria, p.referencia, p.codigo, p.id
+      ].map(normalize);
+
+      return campos.some(x => x.includes(q));
+    }
+
+    function render(){
+      const filtrados = productos
+        .filter(matchesCategoria)
+        .filter(matchesBusqueda);
+
+      if(filtrados.length === 0){
+        grid.innerHTML = `<div class="empty">No hay productos con esos filtros.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtrados.map(p => {
+        const imgSrc = `assets/img/${safeText(p.imagen)}`;
+        const nombre = safeText(p.nombre);
+        const precio = formatCOP(p.precio);
+        const tallas = Array.isArray(p.tallas) ? p.tallas.join(", ") : safeText(p.tallas);
+        const wa = buildWhatsAppLink(p);
+
+        return `
+          <div class="card">
+            <img src="${imgSrc}" alt="${nombre}"
+                 onerror="this.onerror=null;this.style.objectFit='contain';this.style.padding='10px';this.src='assets/brand/logo-savi.png';">
+            <div class="p">
+              <h3>${nombre}</h3>
+              <div class="price">${precio}</div>
+              <div class="meta">Tallas: ${tallas || "N/D"}</div>
+              <a class="btn" href="${wa}" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    async function loadData(){
+      try{
+        const res = await fetch(DATA_URL, { cache:"no-store" });
+        if(!res.ok) throw new Error(`HTTP ${res.status} al cargar ${DATA_URL}`);
+        const json = await res.json();
+        if(!Array.isArray(json)) throw new Error("El JSON no es un arreglo de productos.");
+
+        productos = json.map(p => {
+          const tallas =
+            Array.isArray(p.tallas) ? p.tallas :
+            typeof p.tallas === "string" ? p.tallas.split(",").map(x=>x.trim()).filter(Boolean) :
+            [];
+          return { ...p, tallas };
+        });
+
+        render();
+      }catch(err){
+        console.error(err);
+        grid.innerHTML = `<div class="empty" style="color:#b00020">
+          Error cargando productos. Revisa que exista <b>${DATA_URL}</b> y sea JSON válido.
+        </div>`;
+      }
+    }
+
+    // Buscador
+    searchInput.addEventListener("input", (e)=>{
+      textoBusqueda = e.target.value;
+      render();
     });
-  });
-</script>
 
+    // Categorías
+    categoryButtons.forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        categoriaActiva = btn.getAttribute("data-cat") || "Todos";
+        categoryButtons.forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        render();
+      });
+    });
+
+    loadData();
+  </script>
 </body>
 </html>
+
