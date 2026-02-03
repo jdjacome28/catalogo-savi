@@ -1,5 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+<style>
+:root{
+  --rojo:#E30613;
+  --negro:#000000;
+  --blanco:#ffffff;
+  --gris:#f4f4f4;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, Arial;
+  background: var(--gris);
+  color: var(--negro);
+}
+
+.header{
+  background: var(--negro);
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.header img{
+  height:40px;
+}
+
+.header h1{
+  color:var(--blanco);
+  font-size:20px;
+  margin:0;
+  font-weight:800;
+}
+
+.container{
+  padding:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:var(--blanco);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card .p{
+  padding:14px;
+}
+
+.card h3{
+  margin:0 0 6px 0;
+  font-size:16px;
+}
+
+.price{
+  color:var(--rojo);
+  font-weight:900;
+  font-size:18px;
+}
+
+.meta{
+  font-size:14px;
+  color:#555;
+  margin-top:4px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  background:var(--rojo);
+  color:white;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+</style>
+
+  
 <head>
   <meta charset="UTF-8">
   <title>Catálogo de Zapatos</title>
